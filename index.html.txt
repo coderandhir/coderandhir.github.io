@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Interactive Question</title>
+        <style>
+            .container {
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            .question {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            .box {
+                display: inline-block;
+                padding: 10px;
+                border: 1px solid #ccc;
+                cursor: pointer;
+                background-color: lightgreen;
+                margin: 5px;
+            }
+
+            .unclickable {
+                pointer-events: none;
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="question">Can you talk to me?</div>
+            <div class="box" onclick="showThankYou()">Yes</div>
+            <div class="box unclickable">No</div>
+        </div>
+
+        <script>
+            function showThankYou() {
+                document.body.innerHTML =
+                    '<div style="text-align: center; margin-top: 50px;"><h1 style="font-weight: bold;">Thank you</h1><p>😢</p></div>';
+            }
+        </script>
+    </body>
+</html>
